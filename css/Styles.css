@@ -1,0 +1,225 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/**Aloja font to add to body tag  Tutor-Not working**/
+ /* @font-face{
+  font-family:'Aloja';
+     src: url('../fonts/Aloja Ligh 400.otf') format ('opentype')
+          url('../fonts/Aloja-Light.woff') format ('woff'),
+          url('../fonts/Aloja-Light.otf') format ('opentype');
+}
+         */
+
+body{
+   font-size: 16px;
+  /* font-family:'Aloja', sans-serif; */
+  background-color:#ECE5DC;
+  /* background-image: url('/Kibo test images/body\ background\ image\ 1.png');
+  background-clip:content-box;
+  z-index:10;
+  opacity:1; */
+   /* color: #000000 ;  */
+   line-height:1.6;
+    font-family: "Oxygen", sans-serif; 
+} 
+
+
+
+ /**START HEADER OR NAV-BAR**/
+/**Navbar Color**/
+.Nav-color{
+  background-color: #ffa500;
+}
+.navbar-brand img{/*logo sizing*/
+  width: 106px;
+  height: 100px;
+  margin:0px 15px 10px 0px;    
+}
+
+#restaurant-name{
+  /*Restaurant name*/
+ /* font-family: "Aloja", sans-serif;*/
+  color:#000000;
+  font-size:2em;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top:0px;
+  margin-bottom: 10px;
+  line-height:1;
+  text-decoration:none;  
+}
+.nav-item{
+  align-items: center;
+  margin-top:0px;
+}
+#nav-list {
+  color:#000000;
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-flow: 0;
+  /* flex-wrap: nowrap; Prevents wrapping */
+  align-items: center;
+  justify-content: space-between; /* Spreads out the items */
+  align-items: center; /* Vertically centers the items */
+  width: 90%; /* Ensures the nav items use the full width of the navbar */
+}
+
+
+.nav-item span:hover, :focus{
+  text-decoration: underline;
+  text-underline-offset: 3px; /* Adds some space between the text and the underline */
+  text-decoration-thickness: 5px; /* Makes the underline a bit thicker*/
+  transition: text-decoration 0.3s ease;
+  text-decoration-color:#e0d3c2;
+}
+  
+/*Start of Carosel */
+/* .carousel{
+  position:relative;
+  max-width:100%;
+  overflow: hidden;
+  margin: auto;
+  max-height: 100%; 
+}
+.carousel-container{
+  display:flex;
+  transition: transform 0.5s ease-in-out;
+  height:auto;
+  overflow:hidden;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; 
+  transition: opacity 1s ease-in-out; 
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.carousel-slide.active {
+  opacity: 1; 
+  z-index: 1; 
+}
+.prev, .next{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background-color:rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index:10;
+ }
+.prev{
+  left:10px;
+}
+.next{
+  right: 10px;
+}
+
+#carousel-placeholder {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  background-color: #ffa500; 
+  color: rgb(7, 7, 7); 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 10; 
+  text-align: center;
+}
+ */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  height:600px;
+  overflow: hidden;
+  margin: 0; 
+  padding: 0; 
+  /* display:flex; */
+}
+
+.carousel-container {
+  position: relative;
+  height: 100%;
+  /* width: 100vw; */
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out; 
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-slide img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Placeholder styles */
+#carousel-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffa500;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  text-align: center;
+}
+
+
+
+
+
+  
