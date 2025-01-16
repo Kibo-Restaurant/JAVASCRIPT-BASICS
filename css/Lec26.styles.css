@@ -1,15 +1,10 @@
-html {
-  scroll-behavior: smooth;
-}
-
 /**Aloja font to add to body tag  Tutor-Not working**/
  /* @font-face{
   font-family:'Aloja';
      src: url('../fonts/Aloja Ligh 400.otf') format ('opentype')
           url('../fonts/Aloja-Light.woff') format ('woff'),
           url('../fonts/Aloja-Light.otf') format ('opentype');
-}
-         */
+}         */
 
 body{
    font-size: 16px;
@@ -20,22 +15,16 @@ body{
   z-index:10;
   opacity:1; */
    /* color: #000000 ;  */
-   line-height:2;
-    font-family: "Oxygen", sans-serif; 
+ 
+  font-family: "Oxygen", sans-serif; 
 } 
-
-
 
  /**START HEADER OR NAV-BAR**/
 /**Navbar Color**/
 .Nav-color{
   background-color: #ffa500;
 }
-.navbar-brand img{/*logo sizing*/
-  width: 106px;
-  height: 100px;
-  margin:0px 15px 10px 0px;    
-}
+
 
 #restaurant-name{
   /*Restaurant name*/
@@ -48,41 +37,34 @@ body{
   margin-top:0px;
   margin-bottom: 10px;
   line-height:1;
-  text-decoration:none;  
+  text-decoration:none; 
+  
 }
-.nav-item{
-  align-items: center;
-  margin-top:0px;
+
+
+#nav-list .nav-link {
+  
+  margin-top:10px;
+  
 }
 #nav-list {
   color:#000000;
-  margin-top: 0px;
   text-align: center;
-  display: flex;
-  flex-flow: 0;
-  /* flex-wrap: nowrap; Prevents wrapping */
   align-items: center;
-  justify-content: space-between; /* Spreads out the items */
-  align-items: center; /* Vertically centers the items */
-  width: 90%; /* Ensures the nav items use the full width of the navbar */
 }
 
-
-.nav-item span:hover, :focus{
-  text-decoration: underline;
-  text-underline-offset: 3px; /* Adds some space between the text and the underline */
-  text-decoration-thickness: 5px; /* Makes the underline a bit thicker*/
-  transition: text-decoration 0.3s ease;
-  text-decoration-color:#e0d3c2;
+.nav-item :hover, :focus{
+  background: #E7E7E7;
+  background-size:auto;
+  transition: all 0.3s ease;
 }
-  
-
-.search-container{
+#nav-list span{
+  font-size:1.8 em;
+}
+.serch-container{
   position: relative;
   display:flex;
   align-items: center;
-  width: 20%;
-  
 }
 .search-input{
   width:0;
@@ -90,7 +72,7 @@ body{
   transition: width 0.4s ease, opacity 0.4s ease;
   position: absolute;
   right: 30px;/* adjust as needed*/
-  top: 100%;
+  top: 89%;
   z-index:1000;
   transform: translateY(-0%);
 }
@@ -121,81 +103,6 @@ body{
 .search-container.active  .close-btn{
   display:block;
 }
-.recommend{
-  text-align: center;
-}
-.item {
-  margin: 20px;
-  text-align: center;
-  /* background-color: #f9f9f9; */
-  padding: 20px;
-  /* border: 1px solid #ddd; */
-  border-radius: 8px;
-  width: 100%;
-  max-width: 300px;
-}
-.item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-.no-results {
-  font-size: 18px;
-  color: #555;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f2f2f2;
-  max-width: 400px;
-  margin: auto;
-}
-.item h2 {
-  margin: 15px 0 10px;
-}
-.item a {
-  text-decoration: none;
-  color: #008CBA;
-  font-size: 16px;
-}
-.item a:hover {
-  text-decoration: underline;
-}
-.search-results-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-}
-
-#search-results {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px; /* Space between results */
-}
-
-.search-result-item {
-  padding: 10px;
-  border: 1px solid #ccc;
-  width: 100%;
-  max-width: 300px; /* Limit the width of each result */
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.search-result-item:hover {
-  background-color: #f0e68c; /* Change color on hover */
-  cursor: pointer;
-  transform: scale(1.05); /* Slight zoom effect */
-}
-
-.search-result-item a {
-  text-decoration: none;
-  color: #333;
-}
-
 
 /* #phone{
   margin-top:5px;
@@ -208,16 +115,15 @@ body{
   font-size:1.2em; */
   
 
-  .bi {/*Phone number*/
-top:10%;
-}
-#phone{
+#phone a{/*Phone number*/
+  text-align:right;
   padding-bottom:0;
 
 }
 #phone div {/*Contact us*/
 color:#557C3E;
-text-align: right;
+text-align: ri
+3ght;
 padding-right: 15px;
 }
 /* Toggler button styling */
@@ -266,8 +172,10 @@ padding-right: 15px;
   display: block; /* Show the content */
 }
 
-@media (mix-width: 991px) {
-  
+@media (max-width: 991px) {
+  .navbar-collapse {
+    display: none; /* Hidden by default */
+  }
 }
 
 @media (max-width: 991px) {
@@ -291,13 +199,6 @@ padding-right: 15px;
     align-items: flex-start; /* Align items to the start */
     padding: 5px 10px;
   }
-  
-  .search-container{
-   display:flex;
-   align-items:center;
-   justify-content:center;
-   width:100%;
-  }
 
   .navbar-nav .nav-item {
     padding: 2px 2px; /* Reduce padding between items */
@@ -307,7 +208,6 @@ padding-right: 15px;
   .navbar-nav .nav-link {
     font-size: 0.9em; /* Optional: reduce font size for a more compact look */
   }
-  
 }
 
 
@@ -370,7 +270,6 @@ padding-right: 15px;
   z-index:1000;
   top:0%;
 }
-
 /* @media screen  */
 /* #navbar-properties ul{
   justify-content:center;
@@ -380,7 +279,6 @@ width: -50%;
 height: -50%;
 transition: all 0.3s ease
 } 
-
   
 #trip-icon{
 max-width:50px;
@@ -621,19 +519,16 @@ position: relative;
 #hide-footer{
 display: none;
 }
-#hide-video{
-  display:none;
-}
 
 
 
 
 
 /**Footer**/
-/* .call-us span:hover, a:focus{
+.call-us span:hover, a:focus{
   background: #557C3E;
   
-  } */
+  }
 
 
 /*** [STYLES FOR PREVIOUS FOOTER TRIAL]
@@ -695,22 +590,21 @@ line-height: 2;
   max-width:100%;
   overflow: hidden;
   margin: auto;
-  height: 100%; /*This is an Adjustable*/
+  height: 400px; /*This is an Adjustable*/
 }
 .carousel-container{
   display:flex;
   transition: transform 0.5s ease-in-out;
-  height:auto;
+  height:100%;
 }
 .carousel-slide{
   min-width:100%;
-  box-sizing:border-box;
-  height: calc(100vw * 9 / 16);
+  box-sizing: border-box;
 }
 .carousel-slide img{
   width: 100%;
   height:100%;
-  object-fit:cover; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
+  object-fit:contain; /* contain is adjustable to cover.  object-fit:cover =>>Ensures images 
   cover the slide area without distortion*/
   display:block;
 }
@@ -731,44 +625,14 @@ line-height: 2;
 .next{
   right: 10px;
 }
-/* ORANGE PLACEHOLDER BEFORE CAROUSEL BEGINS*/
-#home-snippet-content {
-  position: relative; /* Make the parent container a positioning context */
-}
 
-#carousel-placeholder {
-  position: absolute; /* Position the placeholder absolutely */
-  top: 0; /* Align it to the top of the carousel */
-  left: 0; /* Align it to the left */
-  right: 0; /* Stretch to the right */
-  bottom: 0; /* Stretch to the bottom */
-  background-color: #ffa500; /* Optional: Add a background color */
-  color: rgb(7, 7, 7); /* Set text color */
-  display: flex; /* Use flex to center text */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  z-index: 10; /* Ensure it appears above other elements */
-  text-align: center;
-}
 
-.carousel {
-  position: relative; /* This allows the placeholder to be positioned correctly */
-  /* Add your carousel styles here */
-}
-/* #carousel-placeholder{
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffa500;
-  font-size: 20%;
-  height: 1000px;
-  color: black; 
-  text-align: center;
-  
-} */
 
-#menu-tile, #events-tile, #map-tile, #beach-bed-tile{
- height: 250px;
+
+
+
+#menu-tile,#specials-tile, #menu-tile1, #specials-tile1, #services-tile, #map-tile {
+  height: 250px;
   width: 100%;
   margin-bottom: 15px;
   margin-left:auto;
@@ -777,40 +641,41 @@ line-height: 2;
   border: 2px solid #8b6a2d;
   overflow:hidden;
 }
-#menu-tile:hover, #events-tile:hover, #map-tile:hover, #beach-bed-tile:hover{
+#menu-tile:hover,#specials-tile:hover,#menu-tile1:hover, #specials-tile1:hover, #services-tile:hover, #map-tile:hover{
   box-shadow:0 1px 5px 1px #504a4a;
   transition: all 0.3s ease;
 }
 #menu-tile{
-  background: url("../Kibo-test-images/huge-seafood.jpg") no-repeat;
+  background: url('../Kibo-test-images/Kibo-Menu-photo-(476).png') no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+#specials-tile{
+  background: url('../Kibo-test-images/Kibo-specials-photo-(476).png') no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+#menu-tile1{
+  background: url('../Kibo-test-images/Kibo-Menu-photo-3-(476).png') no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+#specials-tile1{
+  background: url('../Kibo-test-images/Kibo-Menu-photo-1-(476).png') no-repeat;
   background-position:center;
   background-size: cover;
 }
 
- #beach-bed-tile{  
- background: url("../Kibo-test-images/fortam-beach.jpg") no-repeat;
-  background-position:center;
-  background-size: cover;
-}
-#events-tile{
-  background: url("../Kibo-test-images/events-kibo-restaurant-watamu (2).jpeg") no-repeat;
-  background-position:center;
-  background-size: cover;
-
-}
-
-
-
-#events-tile span, #map-tile span, #beach-bed-tile span,#menu-tile span{
- position: absolute;
+#services-tile span, #map-tile span{
+  position: absolute;
   bottom:0;
   right:0;
   width: 100%;
   text-align:center;
   font-size:1.6 em;
   text-transform:uppercase;
-  background-color: #ffa500;
-  color:#000000;
+  background-color: #000;
+  color:#fff;
   opacity:.8;
 }
 .icon-images{
@@ -959,21 +824,6 @@ padding-right:30px;
   pointer-events: none; /* Allows clicks to pass through the overlay*/
   backdrop-filter: blur(0px); /*Optional : Adds a bur effect to the veil*/
 }
-.text-onoverlay{
-  position:absolute;
-  z-index: 4;
-  /* Centering the text both horizontally and vertically */
-  top: 50%;
-  left: 50%;  
-   transform: translate(-50%, -50%);
-
-  border: 2px solid black;
-  padding:0;
-  cursor: pointer;
-}
-.beach-video{
-  position: relative;
-}
 
 
 /**End of carousel**/
@@ -996,11 +846,20 @@ padding-right:30px;
 .finished-loading {
   opacity:1; /*Show the image/ video once loaded*/
 }
-.lazy-load:hover{
+.slow-load:hover{
   transform: scale(1.05); /*SLightly increase the size*/
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /*add a subtle shadow to create depth*/
 }
-
+.lazy-load{
+  background-color:rgb(226, 205, 205); /*White for images*/
+  display:block;
+  width: 100%; /* Ensures it fills the container */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 100%; /* Prevents the image from exceeding container width */
+   opacity: 1; /*Make the placeholder visible initially */
+  /*opacity: 0;    Hide images and alt text initially*/
+  
+}
 /*Overiding the css class */
 #events-images{
   background-color: none; /*White for images*/
@@ -1092,7 +951,6 @@ padding-right:30px;
     max-height:55px;
   }
 
-
 }
 /*******Large devices only**********/
 @media(min-width:992px) and (max-width:1199px) {
@@ -1104,13 +962,6 @@ padding-right:30px;
     max-width:45px;
     max-height: 45px;
   }
-  #phone{
-    font-size:100%;
-  }
-  .text-onoverlay h3{
-    font-size:99.5%;
-   }
-  
 
   }
 /*******Medium devices only*******/
@@ -1133,28 +984,7 @@ padding-right:30px;
  #separate-footer{
     width:50%;
   }
-  /* THE NEW MENU*/
- .reduce-image{
-  display:flex;
-  justify-content:center;
-  align-content: center;
-  Width:50%;
-  height:auto;
-  
- }
- .reduce-image img{
-  object-fit: cover;
-  overflow:hidden;
- }
- .text-onoverlay h3{
-  font-size:99%;
- }
-  
 
-
-  
- /* THE NEW MENU*/
-  /*  MEDIA SCREEN CAROUSEL ADJUSTMENT*/
 }
 /********small devices only* ******/
 @media (min-width:576px) and (max-width:767px) {
@@ -1174,10 +1004,8 @@ padding-right:30px;
   }
   #panel-footer{
     text-align:center;
+
   }
-  .text-onoverlay h3{
-    font-size:98%;
-   }
  
 }
 
@@ -1228,9 +1056,7 @@ padding-right:30px;
     margin-bottom: 1px;
     padding-bottom: 0;
   }
-  .text-onoverlay h3{
-    font-size:95%;
-   }
+  
 }
 
 
@@ -1267,12 +1093,6 @@ padding-right:30px;
     flex: 0 0 auto;
   width: 100%;
  }
- 
-.carousel-slide{
-  min-width:100%;
-  box-sizing:border-box;
-  height: calc(100vw * 9/12);
-}
 }
 @media screen and (max-width:768px)
 {
@@ -1307,331 +1127,21 @@ padding-right:30px;
      }
   }
 
-.reduce-image img {
-   /* position:absolute; */
-    max-width: 100%;
-    max-height:100%;
-    display: block;
-    object-fit:cover;/* Ensures the image scales while maintaining aspect ratio */
-     
 
-  }
-
-.reduce-image {
-   /* position: relative; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* border: 0.5px solid rgb(252, 248, 248); */
-    /* height:200px;
-    width:200px; */
-    padding:2px;
-}
-
-@media (min-width: 576px) { /* For large screens and above */
-  hr {
-    display: none;
-  }
-}
-/* Text tile styling */
-.menu-contents p {
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  font-size: 25px;
-}
-/*Background styling to handles different ratios*/
-.menu-contents  {
-  /* background-color: #f8ca74; Light background for contrast */
-  /* background-image: url('../Kibo-test-images/menu-background-kibo-restaurant-watamu.png')  no-repeat; */
-  width: 100%;
-  box-sizing:content-box;
-}
-.menu-box{
-  margin-left:10px;
-  margin-right:10px;
-  justify-content: center;
-  align-items: center;
-  display: flex; /* Ensure the flex layout is applied */
-  flex-wrap: wrap; /* Allow items to wrap within the available space */
-  padding: 10px;
-}
-
-/* THE NEW MENU*/
-
-/* THE NEW MENU*/
-/* For small screens */
-@media (max-width: 565px) {
-    .menu-contents {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-        margin-left: 2px;
-        margin-left: 2px;
-        padding-left:0;
-    }
-    .reduce-image {
-        width: 100%;
-        height: auto; 
-    }
-    .reduce-image img{
-      padding:2px;
-    }
-}
-@media (min-width: 992px){
-  /* .reduce-image{
-    display:flex;
-    align-content: center;
-    justify-content: center;
-    Width:25%;
-    height:auto;
-  }
-  .reduce-image img{
-   object-fit: cover;
-  } */
- 
-  .menu-box {
-    display: flex;
-    justify-content: space-between; /* Evenly distribute the content boxes */
-    /* background-color: #f8ca74;  */
-    /* background-image: url('../Kibo-test-images/menu-background-kibo-restaurant-watamu.png'); */
-    padding: 0; /* Remove any padding if present */
-    margin: 0; /* Remove any margin if present */
-  }
-
-  .menu-contents {
-    flex: 1 1 50%; /* Take 50% of the width for each column */
-    margin-bottom: 10px;
-    box-sizing: border-box; /* Ensure padding and borders are included in the width */
-    display: flex;
-    flex-direction: column; /* Make sure text and images stack within each content box */
-  }
-
-  .reduce-image {
-    width: 50%; /* Allow image container to take full width of the parent * I TOOK HALF WIDTH - IT IS THE ONLY THING MAKING TILES APPEAR 4 IN THE COLUMN CALLED MENU-CONTENTS */
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 3px;
-    margin-top:0;
-    margin: 0; /* Remove margin between images */
-  }
-
-  .reduce-image img {
-    width: 100%; /* Ensure the images fill the container */
-    height: auto;
-    object-fit: cover; /* Cover the container without distorting aspect ratio */
-  }
-  #nav-list{
-    display:flex;
-    justify-content: center;
-    font-size:16px;
-  }
-  #nav-list .nav-link{
-    padding:0;
-
-  }
  
 
-  
-  
+/**
+.navbar-brand p {
+  [Certified]
+  color:#000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15 px;
 }
-
-.menu-box {
-  
-  background-image: url('../Kibo-test-images/background-tile-kibo-restaurant.png');
-  /* background-size: cover; */
-  background-position: cover;
- 
+.navbar-brand p span {
+  [Star-K]
+  vertical-align:middle;
 }
-
-@media (max-width: 991px) and (min-width: 320px) {
-  #nav-list .nav-item {
-    display: inline-block;
-    margin: 0 ; /* Adjust spacing between items */
-    padding: 0; /* Adjust padding if needed */
-  }
-  
-  #nav-list .nav-link {
-    display: inline-flex;
-    
-    align-items: center; /* Vertically align icon and text */
-    font-size: 14px; /* Reduce font size for better fit */
-    padding: 5px; /* Adjust padding inside nav links */
-    
-  }
-  #nav-list .nav-link i {
-    margin-right: 10px; /* Increase space between icon and text */
-    font-size: 14px; /* Adjust icon size if needed */
-  }
-
-  #nav-list .nav-item span {
-    display: block;
-    text-align: center;
-  }
-  
-}
-@media(min-width:992px) and (max-width:1260px) {
-  #phone{
-    margin-top:-30px;
-    
-  }
-  
-  
-}
-@media(min-width:1089px) and (max-width:1260px) {
-  #restaurant-name {
-    padding:0;
-    margin: 0; /* Reset margin to avoid unnecessary space */
-    line-height: 1; /* Keep the line height the same */
-    text-decoration: none;
-    white-space: nowrap; /* Prevents text from breaking onto a new line */
-  }
-  
-  /* Ensure the parent container is set up correctly */
-  .container-fluid {
-    display: flex; /* Enable flexbox for proper alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Adjust space as needed */
-  }
-}
-/**EXTRA EXTRA LARGE**/
-
-@media (min-width: 1401px) {
-  .navbar-nav {
-    padding-left: 50px; /* Adjust padding as needed */
-    padding-right: 50px;
-  }
-
-  .nav-item {
-    padding-left: 20px; /* Adjust spacing between nav items */
-    padding-right: 20px;
-  }
-
-  #restaurant-name {
-    margin-right: 30px; /* Adjust spacing between logo and nav items */
-  }
-
-  .search-container {
-    margin-right: 30px; /* Adjust search box positioning */
-  }
-}
-
-
-/*BEACH IMAGES **/
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.image-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.santa-hat {
-  position: absolute;
-  bottom: 50%;
-  left: 30px;
-  font-size: 4rem;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-@media (max-width: 576px) {
-  .santa-hat {
-    font-size: 3rem;
-    bottom: 20%;
-    left: 30px;
-  }
-
-}
-/* Pop-up styles */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.6);  */
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background-color: #ffa500;
-  padding: 5px;
-  border-radius: 10px;
-  text-align: center;
-  position: relative;
-  width: 80%;
-  max-width: 500px;
-  color:#000000;
-}
-
-.popup-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.close-popup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color:black;
-  background-color: white;
-  border-radius: 10px;
-}
-.close-popup:active, 
-.close-popup:hover  {
-  background-color:  #ffa500;;
-  border-radius: 20px;
-  text-decoration: none;
-}
-
-/* Intersection Observor Animation*/
-
-.hidden {
-  opacity: 0;
-  transform: translateY(20px); /* Adjust for sliding effect */
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.animate.slide-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.animate.fade-in {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.animate.zoom-in {
-  opacity: 1;
-  transform: scale(1);
-}
-
-
-
-
-
+**/
+   
   
