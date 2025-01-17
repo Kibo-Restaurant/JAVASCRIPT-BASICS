@@ -40,8 +40,8 @@ function autoSlideOnce() {
     }
 }
 function activateButtons() {
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
+    const prevButton = document.querySelector('.back');
+    const nextButton = document.querySelector('.front');
     if(prevButton) {//if you find the prev button then do this-event listener on click execute the arrow function
         prevButton.addEventListener('click', () => moveSlide(-1));      
     }
